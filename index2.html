@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="w-full overflow-hidden">
+    <div class="grid grid-cols-6 grid-rows-15 bg-black bg-opacity-90 gap-4">
+        <script>
+            const images = Array.from({length: 15}, (_, i) => `https://picsum.photos/200/200?random=${i}`);
+            const positions = Array.from({length: 90}, (_, i) => i);
+            
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 2; j++) {
+                    const randomIndex = Math.floor(Math.random() * positions.length);
+                    const position = positions.splice(randomIndex, 1)[0];
+                    const row = Math.floor(position / 6) + 1;
+                    const col = (position % 6) + 1;
+                    
+                    document.write(`
+                        <div class="aspect-square elem" style="grid-row: ${row}; grid-column: ${col};">
+                            <img src="${images[i]}" alt="Random image ${i+1}" class="w-full h-full object-cover">
+                        </div>
+                    `);
+                }
+            }
+        </script>
+        </script>
+    </div>
+    </div>
+    <div class="fixed top-0 font-['Horizon'] left-0 w-screen h-screen flex flex-col items-center justify-center bg-opacity-50 text-white">
+        <h1 class="text-7xl mb-4 text-center">PARTH CREATES
+            <sup>&#9426;</sup>
+        </h1>
+        <p class="text-3xl text-center">Explore the beauty of tech</p>
+    </div>
+    <div class="w-screen h-screen py-20 flex justify-center items-center ">
+        <div class="w-full h-full flex items-center justify-center z-[999]">
+            <p class="text-3xl text-gray-700 px-4 max-w-5xl mx-auto text-center">
+                As a front-end engineer, I blend creativity with technical expertise to craft engaging and intuitive user interfaces. With a keen eye for design and a passion for clean, efficient code, I transform concepts into responsive, accessible web experiences. My toolkit includes HTML5, CSS3, JavaScript, and modern frameworks like React or Vue.js. I thrive on staying current with the latest web technologies and best practices, ensuring that the websites and applications I develop are not only visually appealing but also performant and user-friendly across all devices. My goal is to create seamless digital experiences that delight users and drive business objectives.
+            </p>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

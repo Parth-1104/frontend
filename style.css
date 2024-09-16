@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #C5BDB4;
+    position: relative;
+}
+#nav{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;/*for centering in y axis*/
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+#nav img{
+    height: 30px;
+    width: 30%;
+    margin-left: 330px;
+}
+nav h5{
+    font-size: 20px;
+    font-weight: 100;
+    width: 30%;
+}
+#nav i{
+    width: 30%;
+    text-align: right;
+}
+#elems{
+    /* background-color: red; */
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+#elem1{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    
+}
+#elem2{
+    width: 25%;
+    height: 100%;
+    /* background-color: blue; */
+    border-right: 2px solid #acacac;
+    border-left: 2px solid #acacac;
+    padding: 20px 60px;
+    text-align: center;
+
+}
+#elem3{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+#elem1 #image-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+#elem3 #image-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+#image-div:hover img{
+    scale: 1.1 ;
+}
+
+#elem1 h4{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: canopee;
+}
