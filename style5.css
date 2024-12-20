@@ -13,6 +13,67 @@ html,body{
     height: 100%;
     width: 100%;
 }
+body{
+    background-color: #f7f7f7;
+
+}
+#nav{
+    /* height: 70px; */
+    width:100%;
+    /* background-color: beige; */
+    position: fixed;
+    z-index: 99;
+    padding:20px ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav-part1{
+    /* background-color: red; */
+    height: 83px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+}
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+#links{
+    padding: 10px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 100;
+    font-size: 14px;
+    margin: 0 37px;
+
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+}
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+}
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform:translate(-50%,-50%)scale(0);
+    /* z-index: 9; */
+}
 #page1{
     min-height: 100vh;
     /* background-color: white; */
@@ -84,11 +145,14 @@ html,body{
     scale: 1.1 ;
 }
 #page3{
-    height: 100vh;
+    min-height: 120vh;
     width: 100%;
     position: relative;
-    padding: 3vw 3vw;
-    /* background-color: aqua; */
+    /* padding: 3vw 3vw; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     /* display: flex;
     align-items: center;
     justify-content: space-between; */
@@ -107,7 +171,25 @@ html,body{
     background-color: rgb(230, 170, 238);
 }
 .elem .dets:hover{
-    height: 120px;
+    height: 110px;
+}
+.child{
+    height: 54vh;
+    width: 38vw;
+
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.child img{
+    height: 100%;
+    transition: all ease 0.5s;
+}
+.child:hover img{
+    scale: 1.1 ;
 }
 @media (max-width:600px) {
     #page1 h1{
@@ -160,6 +242,7 @@ html,body{
     #page2 .elem{
         height: 60vh;
         width: 100%;
+        padding: 10vw;
         /* background-color: red; */
         overflow: hidden;
         margin-bottom: 3vw; ;
@@ -167,15 +250,48 @@ html,body{
 
     .elem .dets
     {
-       height: 30px;
+       height: 5px;
        width: 50%;
        position: absolute;
        border-radius: 50px;
        z-index: 90;
+    padding: 5vw; 
+
        /* top: 50%;
        left: 50%;
        transform: translate(-50%,-50%); */
        background-color: rgb(230, 170, 238);
    }
-    
+   #page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    /* padding: 3vw 3vw; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+  
+.child{
+    height: 54vh;
+    width: 88vw;
+    padding: 10vw;
+
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.child img{
+    height: 100%;
+    transition: all ease 0.5s;
+}
+
 }
